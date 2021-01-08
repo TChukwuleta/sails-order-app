@@ -8,7 +8,7 @@ module.exports = {
             payload,
             tokenSecret,
             {
-                expiresIn: '30 days'
+                expiresIn: 24 * 60 * 60 * 1000
             }
         )
     },

@@ -47,15 +47,15 @@ module.exports = {
                     { user: user },
                     tokenSecret,
                     { 
-                        expiresIn: 259200
+                        expiresIn: 24 * 60 * 60 * 1000
                     }
                 )
                 res.cookie('sailsjwt', token, {
                     signed: true,
-                    maxAge: 259200 
+                    maxAge: 24 * 60 * 60 * 1000 
                 })
                 return res.redirect('/home')
-                //res.send({ token: jwToken.issue({ id: user.id }) }); // payload is { id: user.id}
+                //res.send({ token: jwToken.issue({ id: user.id }) });
             })
             .catch((err) => {  
                 sails.log.error(err);
@@ -87,12 +87,12 @@ module.exports = {
                     { user: user },
                     tokenSecret,
                     {
-                        expiresIn: 259200
+                        expiresIn: 24 * 60 * 60 * 1000
                     }
                 )
                 res.cookie('sailsjwt', token, {
                     signed: true,
-                    maxAge: 259200
+                    maxAge: 24 * 60 * 60 * 1000
                 })
                 return res.redirect('/home')
 
