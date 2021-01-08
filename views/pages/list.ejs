@@ -1,0 +1,26 @@
+<h1 class="display-4">Articles</h1>
+<table class="table table-striped">
+    <thead>
+        <tr>
+            <th>#</th>
+            <th>Title</th>
+            <th>Description</th>
+            <th></th>
+        </tr>
+    </thead>
+    <tbody>
+        <% orders.forEach(function(order){ %>
+            <tr>
+                <td><%= order.id %></td>
+                <td><%= order.title %></td>
+                <td><%= order.description %></td>
+                <td>
+                    <a href="/orders/edit/<%= order.id %>" class="btn btn-primary">Edit</a>
+                    <form class="d-inline" action="/orders/delete/<%= order.id %>" method="POST">
+                        <input type="submit" value="delete" class="btn btn-danger">
+                    </form>
+                </td>
+            </tr>
+        <% }) %>
+    </tbody>
+</table>

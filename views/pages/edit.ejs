@@ -1,0 +1,19 @@
+<ol class="breadcrumb">
+    <li class="breadcrumb-item"><a href="/orders/list">Orders</a></li>
+    <li class="breadcrumb-item">Edit</li>
+</ol>
+
+<h1 class="display-4">Edit Order</h1>
+
+<form method="POST" action="/orders/update/<%= order.id %>">
+    <div class="form-group">
+        <label for="title">Title</label>
+        <input type="text" name="title" class="form-control" value="<%= order.title %>"> 
+    </div>
+
+    <div class="form-group">
+        <label for="description">Description</label>
+        <textarea name="description" class="form-control"><%= order.description %></textarea>
+    </div>
+    <input type="submit" value="submit" class="btn btn-danger">
+</form>
