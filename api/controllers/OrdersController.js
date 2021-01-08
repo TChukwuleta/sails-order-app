@@ -34,6 +34,7 @@ module.exports = {
             res.redirect('/orders/list')
         })
     },
+    //Another Banger
     
     delete: function(req, res) {
         sails.models.orders.destroy({ _id: req.params.id }).exec(function(err) {

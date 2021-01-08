@@ -251,8 +251,8 @@ module.exports = {
     *                                                                          *
     ***************************************************************************/
     onlyAllowOrigins: [
-      'https://example.com',
-      'https://staging.example.com',
+      'https://mystores-order-app.herokuapp.com/',
+      // 'https://staging.mystores-order-app.herokuapp.com/',
     ],
 
 
